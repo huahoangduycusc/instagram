@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./theme/style.css" type="text/css">
+</head>
+<body>
+    <header>
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <a href=""><img src="./images/logo.png" alt=""></a>
+                </div>
+                <div class="nav-search">
+                    <form class="nav-search-form">
+                        <div class="search-nav-content">
+                            <input type="text" name="s" placeholder="Search">
+                            <button type="submit" class="nav-search-btn"><i class="fas fa-search"></i></button>
+                        </div>
+                    </form>
+                </div>
+                <div class="nav-user">
+                    <div class="nav-user-container">
+                        <div class="nav-user-item"><a href=""><i class="fas fa-home"></i></a></div>
+                        <div class="nav-user-item"><a href=""><i class="fab fa-cloudscale"></i></a></div>
+                        <div class="nav-user-item"><a href=""><i class="fas fa-heart"></i></a></div>
+                        <div class="nav-user-item function">
+                            <a href="" class="nav-user-item"><i class="fas fa-user dropdown-toggle"></i></a>
+                            <div class="guess">
+                                <div class="guess-container">
+                                    <a href="" class="guess-item"><i class="fas fa-user"></i><span>Profile</span></a>
+                                    <a href="" class="guess-item"><i class="fas fa-bell"></i><span>Notification</span></a>
+                                    <a href="" class="guess-item"><i class="fas fa-sign-out-alt"></i><span>Đăng xuất</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="body-content">
+        <section class="user-info">
+            <div class="user-avatar">
+                <div class="avatar-profile">
+                    <img src="https://instagram.fhan5-5.fna.fbcdn.net/v/t51.2885-19/s320x320/120911233_113942167015019_7757793538086741578_n.jpg?_nc_ht=instagram.fhan5-5.fna.fbcdn.net&_nc_ohc=sTs5IBeor8UAX_FxU6q&tp=1&oh=e9c580f1980ef82c7adf8bf2fe2a2233&oe=5FFF95C1" alt="">
+                </div>
+            </div>
+            <div class="user-introduce">
+                <div class="user-name">
+                    <h2 class="user-name-title">hua_hoang_duy</h2>
+                    <span><img src="./images/verify.png" alt=""></span>
+                    <div class="user-follow">
+                        <a href="" class="btn-follow">Follow</a>
+                    </div>
+                </div>
+                <ul class="user-more">
+                    <li class="more-item">
+                        <span class="bold">543</span> posts
+                    </li>
+                    <li class="more-item">
+                        <a href=""><span class="bold">543</span> followers</a>
+                    </li>
+                    <li class="more-item">
+                        <span class="bold">0</span> following
+                    </li>
+                </ul>
+                <div class="user-about">
+                    <h2 class="user-about-title">Petes</h2>
+                    <span>Love my self</span>
+                    <a href="" class="user-author">http://google.com</a>
+                </div>
+            </div>
+        </section>
+        <section class="user-posts">
+            <div class="line"></div>
+            <div class="user-own">
+                <div class="user-own-icon">
+                    <i class="fas fa-camera"></i>
+                    <h1>Add a new post </h1>
+                    <p>Share memories with your friends.</p>
+                </div>
+            </div>
+            <div class="list-create">
+                <form action="" method="post" enctype="multipart/form-data">
+                    <div class="box-input">
+                        <p>Message</p>
+                        <textarea name="message" id=""  rows="5" class="form-control"></textarea>
+                    </div>
+                    <div class="box-input">
+                        <p>Choose one or multiple images</p>
+                        <input type="file" id="file" class="file" multiple>
+                    </div>
+                    <div class="box-input">
+                        <button class="btn-create" type="submit">Create post</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <div class="footer-content">
+            <p>© 2020 Hua Hoang Duy. All rights reserved</p>
+        </div>
+    </footer>
+    <script src="./js/app.js"></script>
+</body>
+</html>
