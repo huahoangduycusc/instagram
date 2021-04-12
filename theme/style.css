@@ -669,6 +669,7 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
 }
 
 .article .article-content .article-author .article-avatar {
@@ -709,6 +710,31 @@ a {
 .article .article-content .article-author .article-author-name .follow a {
   color: #0095f6;
   font-weight: 600;
+}
+
+.article .article-content .article-author .article-action {
+  position: absolute;
+  right: 4px;
+  top: 0;
+  height: 72px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.article .article-content .article-author .article-action button {
+  background: 0 0;
+  border: 0;
+  cursor: pointer;
+  padding: 8px;
+  color: #262626;
+  outline: none;
 }
 
 .article .article-content .article-talk {

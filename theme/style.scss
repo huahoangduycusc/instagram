@@ -1,3 +1,6 @@
+/*
+Created by Hua Hoang Duy
+*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 $bg-color: #fafafa;
 $main-color: #262626;
@@ -492,6 +495,7 @@ a{
           height: 72px;
           display: flex;
           align-items: center;
+          position: relative;
           .article-avatar{
               width: 32px;
               height: 32px;
@@ -522,6 +526,23 @@ a{
                       color: #0095f6;
                       font-weight: 600;
                   }
+              }
+          }
+          .article-action{
+              position: absolute;
+              right: 4px;
+              top: 0;
+              height: 72px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              button{
+                background: 0 0;
+                border: 0;
+                cursor: pointer;
+                padding: 8px;
+                color: #262626;
+                outline: none;
               }
           }
       }
