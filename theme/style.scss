@@ -4,6 +4,17 @@ Created by Hua Hoang Duy
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 $bg-color: #fafafa;
 $main-color: #262626;
+$primary: #007BFF;
+
+input[type="file"]{
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    outline: none;
+}
 *{
     margin: 0;
     padding: 0;
@@ -33,6 +44,9 @@ ul{
 a{
     color: #333;
     text-decoration: none;
+}
+.text-primary{
+    color: #0095f6;
 }
 .nav{
     width: 100%;
@@ -143,6 +157,22 @@ a{
 }
 .guess-container > .guess-item:hover{
     background: #eee;
+}
+.btn{
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    line-height: 1.5;
+    transition: background-color 0.3s ease;
+    padding: .625rem 1.25rem;
+    cursor: pointer;
+    outline: none;
+}
+.rounded {
+    border-radius: .25rem!important;
 }
 @media only screen and(max-width:768px){
     .nav-container{
@@ -550,6 +580,7 @@ a{
           padding: 12px 16px;
           max-height: 350px;
           overflow-y: scroll;
+          box-sizing: content-box;
           .article-talk-item{
               padding-bottom: 16px;
               display: flex;
@@ -853,6 +884,69 @@ a{
     font-weight: 600;
 }
 // style for index
+.visibility-hidden{
+    visibility: hidden;
+}
+.float-right{
+    float: right !important;
+}
+.float-left{
+    float: left !important;
+}
+.card{
+    width: 100%;
+    margin-bottom: 15px;
+    word-wrap: break-word;
+    background-color: #fff;
+    border-radius: 5px;
+    border: 1px solid rgba(111, 111, 111, 0.125);
+    position: relative;
+    .card-body{
+        padding: 10px;
+        .media{
+            display: flex;
+            .author-avatar{
+                margin-right: 10px;
+                img{
+                    border-radius: 50%;
+                    object-fit: cover;
+                }
+            }
+            .media-body{
+                width: 100%;
+                textarea{
+                    border: 0 !important;
+                    outline: none;
+                    padding: 7px 10px;
+                }
+            }
+        }
+    }
+    .card-footer{
+        padding: 9px 12px;
+    }
+}
+.post-btn{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .post-btn-group{
+        display: flex;
+        align-items: center;
+    }
+}
+.rounded-pill{
+    border-radius: 50rem!important;
+}
+@for $i from 10 to 50 {
+    .f-size-#{$i}{
+        font-size: $i+px !important;
+    }
+}
+.btn-primary{
+    background-color: $primary;
+    color: #fff;
+}
 .box-welcome{
     width: 100%;
     padding-top: 30px;
@@ -947,15 +1041,9 @@ a{
                         .post-count-img{
                             display: block;
                             float: right;
+                            font-size: 30px;
                             i{
                                 display: inline-block;
-                                width: 6px;
-                                height: 6px;
-                                border-radius: 3px;
-                                background: #31a9f8;
-                                &:nth-child(1){
-                                    background: gray;
-                                }
                             }
                         }
                     }

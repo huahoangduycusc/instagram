@@ -27,8 +27,8 @@
 
     display: block;
 
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
     padding: 0;
     -webkit-transform: translate(0, -50%);
     -ms-transform: translate(0, -50%);
@@ -40,6 +40,7 @@
     border: none;
     outline: none;
     background: transparent;
+    z-index: 5;
 }
 .slick-prev:hover,
 .slick-prev:focus,
@@ -60,17 +61,17 @@
 .slick-prev.slick-disabled:before,
 .slick-next.slick-disabled:before
 {
-    opacity: .25;
+    display: none;
 }
 
 .slick-prev:before,
 .slick-next:before
 {
     font-family: 'slick';
-    font-size: 20px;
+    font-size: 25px;
     line-height: 1;
 
-    opacity: .75;
+    opacity: .95;
     color: white;
 
     -webkit-font-smoothing: antialiased;
@@ -79,11 +80,11 @@
 
 .slick-prev
 {
-    left: -25px;
+    left: 20px;
 }
 [dir='rtl'] .slick-prev
 {
-    right: -25px;
+    right: 20px;
     left: auto;
 }
 .slick-prev:before
@@ -97,7 +98,7 @@
 
 .slick-next
 {
-    right: -25px;
+    right: 20px;
 }
 [dir='rtl'] .slick-next
 {
@@ -114,15 +115,10 @@
 }
 
 /* Dots */
-.slick-dotted.slick-slider
-{
-    margin-bottom: 30px;
-}
-
 .slick-dots
 {
     position: absolute;
-    bottom: -25px;
+    bottom: 15px;
 
     display: block;
 
@@ -140,9 +136,8 @@
 
     display: inline-block;
 
-    width: 20px;
+    width: 10px;
     height: 20px;
-    margin: 0 5px;
     padding: 0;
 
     cursor: pointer;
@@ -156,7 +151,6 @@
 
     width: 20px;
     height: 20px;
-    padding: 5px;
 
     cursor: pointer;
 
@@ -191,8 +185,8 @@
     content: '•';
     text-align: center;
 
-    opacity: .25;
-    color: black;
+    opacity: .5;
+    color: rgb(102, 101, 101);
 
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -200,5 +194,17 @@
 .slick-dots li.slick-active button:before
 {
     opacity: .75;
-    color: black;
+    color: #fff;
+}
+.post-index-img .slick-dots{
+    bottom: -25px;
+}
+.post-index-img .slick-dots li button:before
+{
+    font-size: 7px;
+}
+.post-index-img .slick-dots li.slick-active button:before
+{
+    opacity: 1;
+    color: #0095f6;
 }

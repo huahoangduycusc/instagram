@@ -6,7 +6,10 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
     <link rel="stylesheet" href="./theme/style.css" type="text/css">
+    <link rel="stylesheet" href="./theme/slick.css">
+    <link rel="stylesheet" href="./theme/slick-theme.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./js/slick.min.js"></script>
 </head>
 <body>
     <header>
@@ -47,6 +50,32 @@
         <div class="box-welcome">
             <div class="welcome-left">
                 <div class="box-view">
+                    <div class="card">
+                        <form method="post" enctype="multipart/form-data">
+                        <div class="card-body">
+                            <div class="media">
+                                <div class="author-avatar">
+                                    <img src="./images/1.jpg" width="60px" height="60px">
+                                </div>
+                                <div class="media-body">
+                                    <textarea name="description" rows="5" class="form-control" placeholder="Write something..." class="form-control" style="overflow: hidden; overflow-wrap: break-word; height: 116px;"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="post-btn">
+                                <div class="post-btn-group">
+                                    <input type="file" name="photo" id="filePhoto" class="visibility-hidden">
+                                    <button type="button" class="btn btn-round text-primary" onclick="$('#filePhoto').trigger('click')">
+                                        <i class="far fa-image f-size-25"></i>
+                                    </button>
+                                    <span id="previewImage"></span>
+                                </div>
+                                <button class="btn rounded-pill btn-primary float-right">Publish</button>
+                            </div>
+                        </div>
+                        </form>
+                    </div>
                     <article class="post-index">
                         <div class="post-index-author">
                             <div class="post-index-avatar">
@@ -62,9 +91,9 @@
                             </button>
                         </div>
                         <div class="post-index-img">
-                            <a href="">
-                                <img src="./images/1.jpg" alt="">
-                            </a>
+                            <div><img src="./images/1.jpg"></div>
+                            <div><img src="./images/2.jpg"></div>
+                            <div><img src="./images/3.jpg"></div>
                         </div>
                         <div class="post-index-content">
                             <section class="post-index-operation">
@@ -76,9 +105,7 @@
                                     <label for="msg"><i class="far fa-comment"></i></label>
                                 </span>
                                 <div class="post-count-img">
-                                    <i></i>
-                                    <i></i>
-                                    <i></i>
+                                    <i class="far fa-bookmark"></i>
                                 </div>
                             </section>
                             <section class="post-index-like">
@@ -113,9 +140,8 @@
                             </button>
                         </div>
                         <div class="post-index-img">
-                            <a href="">
-                                <img src="./images/2.jpg" alt="">
-                            </a>
+                            <div><img src="./images/1.jpg"></div>
+                            <div><img src="./images/2.jpg"></div>
                         </div>
                         <div class="post-index-content">
                             <section class="post-index-operation">
@@ -126,6 +152,9 @@
                                 <span>
                                     <label for="msg"><i class="far fa-comment"></i></label>
                                 </span>
+                                <div class="post-count-img">
+                                    <i class="far fa-bookmark"></i>
+                                </div>
                             </section>
                             <section class="post-index-like">
                                 <span>222</span> likes
@@ -202,5 +231,14 @@
     <input type="text" class="hidden" id="url">
     <script src="./js/app.js"></script>
     <script src="./js/post.js"></script>
+    <script>
+        $(document).ready(function(){
+        $('.post-index-img').slick({
+            dots: true,
+            infinite: false,
+            speed: 300,
+        });
+    });
+    </script>
 </body>
 </html>
